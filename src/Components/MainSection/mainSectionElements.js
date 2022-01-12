@@ -1,0 +1,82 @@
+import styled from 'styled-components'
+
+export const MainContainer = styled.div `
+  background : #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+
+
+`
+
+export const MainBackground = styled.div `
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+`
+export const ImageBackground = styled.img `
+  width: 100%;
+  height: 100%;
+
+  background: #232a34;
+
+`
+
+export const MainBtnContainer = styled.div `
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  flex-direction: column;
+
+`
+
+export const MainContent = styled.div `
+  z-index : 3;
+  max-width: 1200px;
+  position: absolute;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+`
+
+export const MainH1 = styled.h1 `
+  font-size: 48px;
+  color: #000;
+  text-align: center;
+
+  @media screen and (max-width: 768px){
+    font-size: 40px;
+  }
+  @media screen and (max-width: 480px){
+    font-size: 32px;
+  }
+`
+
+export const MainP = styled.p `
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  margin-top: 24px;
+  max-width: 600px;
+
+  @media screen and (max-width: 768px){
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px){
+    font-size: 16px;
+  }
+
+`
