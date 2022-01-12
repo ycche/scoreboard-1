@@ -18,9 +18,9 @@ module.exports.manualLogin((req,res) => {
 export const registerAccount = ((req,res) =>{
     const user = await pool.query("SELECT * FROM users WHERE user_email = $1",[req.email])
     if (user.rows.length !== 0){
-        return res.status(401)
+        return res.status(401).json("There already exists a user with that e-mail.")
     }
-    const hash = genPass(req.body.pw)
+    const hash = genPass(req.body.password)
     const salt = hash.salt
     const hash = hash.hash
 
