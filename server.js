@@ -1,33 +1,38 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { allowedNodeEnvironmentFlags } = require('process');
+const passport = require('passport')
+const session = require("express-session");
+const pgSession = require('connect-pg-simple')(session)
 const api = require('./backend/routes/routes')
-const { createProxyMiddleware } = require("http-proxy-middleware")
+const pgPool = require('./backend/config/db').pool
+require('./backend/config/passport')
 
 const app = express();
-const port = process.env.port || 5000;
-
+const port = process.env.port || 4000;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use(cors());
+app.use(session({
+  store: new pgSession({
+    pool : pgPool,
+    tableName: "session"
+  }),
+  secret : "secret",
+  resave : false,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 },
+  saveUninitialized : true
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
-app.use(api);
+app.use(api)
 
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static(path.join(__dirname, 'client/build')));
-
-    app.get('*', function (req, res) {
-        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-    });
-};
-
-app.get('*', (req, res) => {
-    res.status(200).json({
-        msg: 'Catch All'
-    });
-});
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  });
 
 app.listen(port, ()=> console.log(`PORT: ${port}`))

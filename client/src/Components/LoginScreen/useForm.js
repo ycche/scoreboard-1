@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const useForm = (callback,validateInfo,submitForm) => {
@@ -7,7 +8,10 @@ const useForm = (callback,validateInfo,submitForm) => {
     password : '',
   })
 
-  const [errors,setErrors] = useState(false)
+  const [errors,setErrors] = useState({
+
+  })
+  
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = e => {
@@ -17,6 +21,7 @@ const useForm = (callback,validateInfo,submitForm) => {
       [name] : value
     })
   }
+  const navigate = useNavigate();
   const handleSubmit = e =>{
     e.preventDefault();
 
@@ -24,11 +29,10 @@ const useForm = (callback,validateInfo,submitForm) => {
     setIsSubmitting(true);
   }
   useEffect(() => {
-    if(!errors && isSubmitting){
-      console.log(values);
-      callback();
+    if(Object.keys(errors).length === 0 && isSubmitting){
       axios.post('/login', values)
-        .then(res => console.log(res.data))
+        .then(res => navigate('/'))
+        .catch(res => console.log("Bad login"))
     }
   },[errors])
   return {handleChange,values,handleSubmit,errors};
