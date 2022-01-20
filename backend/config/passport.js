@@ -18,7 +18,6 @@ passport.use(new LocalStrategy( customFields,
             if (isValid){
                 return done(null, {
                     id : first.user_id,
-                    user : first.user_email
                 })
             } else{
                 return done(null,false)
@@ -34,7 +33,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (userId, done) =>{
-    await Pool.query("SELECT * FROM users WHERE user_id = $1", [userId]).then((user) => {
+    await Pool.query("SELECT user_id FROM users WHERE user_id = $1", [userId]).then((user) => {
         const first = user.rows[0]
         done(null, first);
     })
