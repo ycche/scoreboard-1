@@ -6,6 +6,7 @@ import RegisterPage from './Pages/RegisterPage';
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
+  const [auth, isAuth] = useState(false)
   return (
     <Router>
       <Routes>
