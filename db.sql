@@ -16,7 +16,7 @@ CREATE TABLE "boards" (
     board_type SMALLINT NOT NULL,
     board_priority SMALLINT NOT NULL,
     date_created DATE NOT NULL DEFAULT CURRENT_DATE,
-    date_last_modified DATE NOT NULL DEFAULT CURRENT_DATE,
+    date_last_modified DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 INSERT INTO users (user_email, user_salt, user_pass) VALUES ('q', 'q', 'q');

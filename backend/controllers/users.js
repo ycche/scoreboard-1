@@ -8,14 +8,26 @@ module.exports.getUserHome = (async (req, res) => {
 // Refresh page after add/delete/update so boards can be sorted appropriately.
 module.exports.addBoard = (async (req, res) => {
     const query = await pool.query("insert into boards (user_id, board_name, board_type, board_priority) values ($1, $2, $3, $4)",
-    [req.user.id, req.body.name, req.body.type, req.body.priority])
+    [req.user.user_id, req.body.name, req.body.type, req.body.priority]).then(() => {
+        res.send("Successful Added Board")
+    }).catch(() => {
+        res.send("Unsuccessful Add")
+    })
 })
 
 module.exports.deleteBoard = (async (req, res) => {
-    const query = await pool.query("delete from boards where board_id = $1", [req.user.id])
+    const query = await pool.query("delete from boards where board_id = $1", [req.body.id]).then(() => {
+        res.send("Successful Deleted Board : " + req.body.id)
+    }).catch(() => {
+        res.send("Unsuccessful Delete")
+    })
 })
 
-module.exports.updateBoard = (async (req,req) => {
-    const query = await pool.query("update boards set (board_name = $1, board_priority = $2) where board_id = $3", 
-    [req.body.name, req.body.priority, req.user.id])
+module.exports.updateBoard = (async (req, res) => {
+    const query = await pool.query("update boards set board_name = $1, board_priority = $2 where board_id = $3", 
+    [req.body.name, req.body.priority, req.body.id]).then(() => {
+        console.log("Update Successful")
+    }).catch(() => {
+        console.log("Update Failed")
+    })
 })

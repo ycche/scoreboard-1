@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const loginControllers = require('../controllers/login')
-const userControllers = require('../controllers/')
+const userControllers = require('../controllers/users')
 const passport = require('passport')
 
 const isAuth = ((req, res, next) => {
@@ -20,7 +20,7 @@ router.post('/login', passport.authenticate('local', {failure: 'login-failure', 
 router.get('/user', isAuth, userControllers.getUserHome)
 router.post('/user/board/add', isAuth, userControllers.addBoard)
 router.put('/user/board/update', isAuth, userControllers.updateBoard)
-router.delete('/user/board/add', isAuth, userControllers.deleteBoard)
+router.delete('/user/board/delete', isAuth, userControllers.deleteBoard)
 
 
 module.exports = router
