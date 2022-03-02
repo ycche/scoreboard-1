@@ -17,7 +17,7 @@ passport.use(new LocalStrategy( customFields,
             const isValid = validatePassword(password,first.user_pass, first.user_salt)
             if (isValid){
                 return done(null, {
-                    id : first.user_id,
+                    id : first.user_id
                 })
             } else{
                 return done(null,false)

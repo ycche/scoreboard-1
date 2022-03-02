@@ -1,9 +1,14 @@
 const connection = require ("../config/db")
 const pool = connection.pool
 
+module.exports.getUserID = (async (req, res) => {
+    res.json(req.user.user_id)
+})
 module.exports.getUserHome = (async (req, res) => {
-    const boards = await pool.query("select * from boards where user_id = $1", [req.user.id])
-    
+    const boards = await pool.query("select * from boards where user_id = $1", [req.user.user_id])
+    console.log(boards.rows)
+    res.json(boards.rows)
+        
 })
 // Refresh page after add/delete/update so boards can be sorted appropriately.
 module.exports.addBoard = (async (req, res) => {

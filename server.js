@@ -6,6 +6,7 @@ const session = require("express-session");
 const pgSession = require('connect-pg-simple')(session)
 const api = require('./backend/routes/routes')
 const pgPool = require('./backend/config/db').pool
+require('dotenv').config()
 require('./backend/config/passport')
 
 const app = express();
@@ -31,12 +32,9 @@ app.use(passport.session())
 app.use(api)
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
-  });
 
-app.get('/register', (req,res) => {
-    res.sendFile(path.join(__dirname, '../../build/index.html'));
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
   });
 
 app.listen(port, ()=> console.log(`PORT: ${port}`))
