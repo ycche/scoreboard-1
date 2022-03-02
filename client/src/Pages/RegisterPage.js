@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import FormNavbar from '../Components/FormNavbar/FormNavbar'
 import RegisterSection from '../Components/RegisterScreen/RegisterSection'
 function RegisterPage() {
 
   return (
-    <p>
+    <div>
+      <FormNavbar></FormNavbar>
       <RegisterSection/>
-    </p>
+    </div>
 
   )
 }
