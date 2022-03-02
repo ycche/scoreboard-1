@@ -1,0 +1,45 @@
+.userContent{
+    display:flex;
+    padding-top: 75px;
+}
+.userPage{
+    display:block;
+}
+
+.list-wrapper{
+    margin-top: 50px;
+    width: 92%;
+}
+
+
+.list-heading{
+    padding-left: 50px;
+    width: 100%;
+    display:flex;
+    background-color: white;
+}
+
+.list-heading-title{
+    font-weight:bold;
+    color:rgb(68, 67, 67);
+    margin-right: 50%
+}
+
+.list-heading-owner{
+    font-weight:bold;
+    color:rgb(68, 67, 67);
+    margin-right: 23%
+}
+
+.list-heading-modified{
+    font-weight:bold;
+    color:rgb(68, 67, 67);
+    position:relative;
+    
+}
+
+.list-container{
+    width: 100%;
+    margin-left: 4%;
+}
+

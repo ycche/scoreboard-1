@@ -1,0 +1,18 @@
+.user-board{
+    height: 50px;
+    width: 100%;
+    border-top:1px solid rgba(0,0,0,0.15);
+}
+
+.user-board-link{
+    color: rgb(66, 66, 179);
+    text-decoration: none;
+    width: 20%;
+    padding-left: 50px;
+    top: 14px;
+    position: relative;
+}
+
+.user-board-link:hover{
+    text-decoration: underline;
+}

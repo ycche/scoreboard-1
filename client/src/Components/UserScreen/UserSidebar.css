@@ -1,0 +1,40 @@
+.sidebar{
+    width: 20%;
+}
+
+.sidebar-link{
+    display:block;
+    height:40px;
+    padding-left: 20%;
+    padding-top: 16px;
+    cursor:pointer;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.sidebar-link:hover{
+    background-color: rgb(207, 206, 206);
+}
+.sidebar-create{
+    display:block;
+    padding: 15px 22px;
+    border-radius: 25px;
+    border:1px solid rgba(0,0,0,0.15);
+    color: white;
+    font-size: 16px;
+    background-color:#008094;
+    margin-bottom: 15px;
+    cursor:pointer;
+}
+
+.sidebar-create:hover{
+    background-color:#015d6b;
+}
+
+.sidebar-create-wrapper{
+    display: flex;
+    margin-left: 12%;
+    margin-top:16px;
+}
+
+

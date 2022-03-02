@@ -1,0 +1,97 @@
+.UserNavContainer{
+    background: white;
+    width: 100%;
+    height: 64px;
+    display:flex;
+    box-shadow: 0 4px 2px -3px gray;
+    z-index: 10;
+    position:absolute;
+}
+
+.UserNavLogoWrapper{
+    padding-left:60px;
+    padding-top:14px;
+}
+
+.UserNavLogo{
+    font-size:30px;
+    padding-top: 10px;
+    text-decoration: none;
+    color:#22c387;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-left:935px;
+    padding-top: 15px;
+  }
+.dropdown-button{
+    font-size: 15px;
+    border-radius: 24px;
+    padding: 8px 16px;
+    border:1px solid rgba(0,0,0,0.15);
+    background-color: #22c387;
+    cursor:pointer;
+}
+.dropdown-button:hover{
+    background-color:#1ca070;
+}
+  .dropdown-content {
+    display: none;
+    position: relative;
+    width: 270px;
+    height: 220px;
+    margin-left:-60px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    margin-left: -185px;
+    position:relative;
+    border-radius:10px;
+  }
+  .dropdown-link{
+    display: block;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    width:260px;
+    text-decoration: none;
+    z-index: 10;
+  }
+  .dropdown-profile-wrapper{
+    background-color: white;
+    width: 160px;
+    padding-bottom: 10px;
+  }
+  .dropdown-profile{
+    display: block;
+    color: black;
+    border:1px solid #00A4BD;
+    text-align:center;
+    width: 160px;
+    margin-left:50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+
+  .dropdown-content div {
+    display: block;
+    color: black;
+    background-color: white;
+    text-align:center;
+    padding-top: 20px;
+    width: 260px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 10;
+    margin-bottom:15px;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+  }
