@@ -1,0 +1,73 @@
+.LoginContainer{
+    display: block;
+    height:980px;
+}
+
+.LoginTextWrapper{
+    width: 350px;
+    display: flex;
+}
+
+.LoginCreateText{
+    font-size:19px;
+}
+
+.LoginCreateAccount{
+    margin-left:150px;
+    font-size: 14px;
+    padding-top:10px;
+}
+.CreateRegisterLink{
+    padding-top:24px;
+    margin-left:5px;
+    font-size: 14px;
+    text-decoration:none;
+    color:#1ca070
+}
+
+.CreateRegisterLink:hover{
+    text-decoration:underline;
+}
+
+.LoginForm{
+    margin-top:-10px;
+}
+
+.LoginContent{
+    margin-left:600px;
+    margin-top:190px;
+    margin-bottom:-70px;
+}
+
+.LoginInput{
+    margin-top:24px;
+    font-size:18px;
+    width:325px;
+    padding-left:8px;
+    border:1px solid rgba(0,0,0,0.15);
+    border-width: 1px;
+    line-height:normal;
+    min-height:34px;
+    border-radius: 3px;
+}
+
+.LoginButtonWrapper{
+    margin-top:24px;
+}
+
+.LoginButton{
+    font-size:18px;
+    width:335px;
+    background-color:#22c387;
+    border-radius:3px;
+    border:1px solid rgba(0,0,0,0.15);
+    padding-top:8px;
+    padding-bottom:8px;
+    color:white;
+    transition-duration: 0.3s;
+}
+
+.LoginButton:hover{
+    background-color:#1ca070;
+    cursor:pointer;
+}

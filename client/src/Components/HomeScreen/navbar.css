@@ -1,0 +1,55 @@
+.NavContainer{
+    background: white;
+    height: 100px;
+    display:flex;
+}
+
+.NavLogoWrapper{
+    padding-left:60px;
+    padding-top:14px;
+
+}
+
+.NavLogo{
+    font-size:30px;
+    text-decoration: none;
+    color:#22c387;
+}
+.NavLoginWrapper{
+    padding-top: 22px;
+    margin-left: 770px;    
+    align-items:center;
+}
+.NavLogin{
+    background-color: white;
+    color:black;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition-duration: 0.3s;
+}
+.NavLogin:hover{
+    background: #C5E1A5;
+}
+
+.NavSignupWrapper{
+    padding-top: 22px;
+    align-items: center;
+    padding-left: 18px; 
+}
+
+.NavSignup{
+    background-color: #9CCC65;
+    color:black;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition-duration: 0.3s;
+}
+
+.NavSignup:hover{
+    background-color: #8AB35B;
+}
+

@@ -31,7 +31,10 @@ const useForm = (callback,validateInfo,submitForm) => {
   useEffect(() => {
     if(Object.keys(errors).length === 0 && isSubmitting){
       axios.post('/login', values)
-        .then(res => navigate('/'))
+        .then(res => {
+          navigate('/home')
+          sessionStorage.setItem('Auth', 'False')
+        })
         .catch(res => console.log("Bad login"))
     }
   },[errors])

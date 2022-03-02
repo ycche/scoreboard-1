@@ -1,0 +1,65 @@
+.InfoSectionWrapper{
+    display: block;
+    background: rgb(46,223,121);
+    background: linear-gradient(0deg, rgba(46,223,121,1) 0%, #22c387 100%);
+    height: 980px;
+    background-size:cover;
+    margin-top: -36px;
+    z-index: -1;
+}
+
+.TextHeadingWrapper{
+    display: block;
+    height : 100px;
+    width: 600px;
+    padding-top: 175px;
+    padding-left: 250px;
+}
+
+.TextHeading{
+    font-size: 58px;
+    color: #343434;
+    font-weight:bold;
+    letter-spacing: .75px;
+
+}
+
+.TextSubheadingWrapper{
+    display: block;
+    width: 600px;
+    padding-top: 90px;
+    padding-left: 250px;
+}
+
+.TextSubheading{
+    font-size: 22px;
+    color: #343434;
+    font-weight:300;
+
+}
+
+.ContentButtonWrapper{
+    padding-top: 40px;
+    display: block;
+    padding-left: 250px;
+    height: 100px;
+}
+
+.ContentButton{
+    font-size: 28px;
+    padding: 12px 50px;
+    border-radius: 10px;
+    border: rgb(46,223,121);
+    align-items: center;
+    width: 20%;
+    transition-duration: 0.3s;
+    cursor:pointer;
+    background-color: white;
+    text-decoration: none;
+    color:black;
+}
+
+.ContentButton:hover{
+    background-color: #effced;
+}
+
