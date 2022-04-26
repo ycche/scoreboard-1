@@ -3,11 +3,13 @@ import validateInfo from "./validateInfo"
 import useForm from './useForm'
 import {Link} from 'react-router-dom'
 import './RegisterSection.css'
+import accessImage from "../../Images/access.svg"
 const RegisterSection = ({submitForm}) => {
   const {handleChange,handleSubmit,values, errors} = useForm(submitForm, validateInfo);
   return (
     <div className = "RegisterContainer">
         <div className = "RegisterContent">
+            <div className='register-left-wrapper'>
         <div className = 'RegisterTextWrapper'>
             <p className = 'CreateText'>
                 Create an account
@@ -42,6 +44,11 @@ const RegisterSection = ({submitForm}) => {
             </div>
         </form>
         </div>
+        <div className='register-img-wrapper'>
+        <img className = 'register-img' src={accessImage}></img>
+    </div>
+        </div>
+
     </div>
   )
 }

@@ -9,11 +9,12 @@
 .list-wrapper{
     margin-top: 50px;
     width: 92%;
+    
 }
 
 
 .list-heading{
-    padding-left: 50px;
+    margin-left: 3.4%;
     width: 100%;
     display:flex;
     background-color: white;
@@ -34,12 +35,11 @@
 .list-heading-modified{
     font-weight:bold;
     color:rgb(68, 67, 67);
-    position:relative;
-    
+    margin-right: 50%;
 }
 
 .list-container{
+    margin-left: 2%;
     width: 100%;
-    margin-left: 4%;
 }
 

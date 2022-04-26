@@ -1,21 +1,29 @@
+const { prototype } = require("express-session/session/cookie")
 const connection = require ("../config/db")
 const pool = connection.pool
 
 module.exports.getUserID = (async (req, res) => {
     res.json(req.user.user_id)
 })
+
+module.exports.getUserName =  (async (req, res) => {
+    const data = await pool.query("select user_email from users where user_id = $1", [req.user.user_id])
+    res.json(data.rows)
+})
+
 module.exports.getUserHome = (async (req, res) => {
     const boards = await pool.query("select * from boards where user_id = $1", [req.user.user_id])
-    console.log(boards.rows)
     res.json(boards.rows)
         
 })
 // Refresh page after add/delete/update so boards can be sorted appropriately.
 module.exports.addBoard = (async (req, res) => {
-    const query = await pool.query("insert into boards (user_id, board_name, board_type, board_priority) values ($1, $2, $3, $4)",
-    [req.user.user_id, req.body.name, req.body.type, req.body.priority]).then(() => {
+    const query = await pool.query("insert into boards (user_id, board_name, board_type, board_priority) values ($1, $2, 1, 1)",
+    [req.user.user_id, req.body.name]).then(() => {
+        console.log("Success")
         res.send("Successful Added Board")
     }).catch(() => {
+        console.log("failure")
         res.send("Unsuccessful Add")
     })
 })
@@ -23,8 +31,10 @@ module.exports.addBoard = (async (req, res) => {
 module.exports.deleteBoard = (async (req, res) => {
     const query = await pool.query("delete from boards where board_id = $1", [req.body.id]).then(() => {
         res.send("Successful Deleted Board : " + req.body.id)
+        console.log(req.body.id)
     }).catch(() => {
         res.send("Unsuccessful Delete")
+        console.log("failure")
     })
 })
 

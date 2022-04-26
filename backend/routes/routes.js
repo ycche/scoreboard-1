@@ -20,9 +20,11 @@ router.get('/auth', isAuth)
 
 router.get('/user/id', isAuth, userControllers.getUserID)
 router.get('/user', isAuth, userControllers.getUserHome)
+router.get('/user/name', isAuth, userControllers.getUserName)
 router.post('/user/board/add', isAuth, userControllers.addBoard)
 router.put('/user/board/update', isAuth, userControllers.updateBoard)
 router.delete('/user/board/delete', isAuth, userControllers.deleteBoard)
+
 
 
 module.exports = router

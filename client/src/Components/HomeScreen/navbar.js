@@ -8,6 +8,7 @@ function Navbar () {
             Board
         </Link>
         </div>
+
         <div className = "NavLoginWrapper">
         <Link to ={'/login'} className = "NavLogin">
             Login
@@ -18,6 +19,7 @@ function Navbar () {
             Sign Up
         </Link>
         </div>
+
    </div>
     
 }

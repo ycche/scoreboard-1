@@ -1,6 +1,5 @@
 .RegisterContainer{
     display: block;
-    height:980px;
 }
 
 .RegisterTextWrapper{
@@ -31,12 +30,13 @@
 
 .RegisterForm{
     margin-top:-10px;
+    width: 40%;
 }
 
 .RegisterContent{
-    margin-left:600px;
-    margin-top:190px;
-    margin-bottom:-70px;
+    margin-left:24%;
+    margin-top:10%;
+    display: flex;
 }
 
 .RegisterInput{
@@ -70,4 +70,23 @@
 .RegisterButton:hover{
     background-color:#1ca070;
     cursor:pointer;
+}
+
+.register-img-wrapper{
+    z-index: 1;
+    position:absolute;
+    left: 56%;
+}
+
+.register-img{
+    height: 300px;
+    width:auto;
+} @media screen and (max-width: 940px){
+    .register-img{
+    visibility: hidden;
+    }
+}
+
+.register-left-wrapper {
+    display: block;
 }

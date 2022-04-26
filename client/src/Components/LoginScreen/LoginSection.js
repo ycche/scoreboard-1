@@ -3,11 +3,13 @@ import validateInfo from "./validateInfo"
 import useForm from './useForm'
 import {Link} from 'react-router-dom'
 import './LoginSection.css'
+import accessImage from "../../Images/access.svg"
 function LoginSection({submitForm}) {
   const {handleChange, values,handleSubmit,errors} = useForm(submitForm, validateInfo);
   return (
     <div className = "LoginContainer">
         <div className = "LoginContent">
+        <div className = "login-left-wrapper">
         <div className = "LoginTextWrapper">
         <p className = 'LoginCreateText'>
                 Sign in
@@ -40,7 +42,12 @@ function LoginSection({submitForm}) {
                 </div>
             </div>
         </form>
+        </div>
+        <div className='login-img-wrapper'>
+        <img className = 'login-img' src={accessImage}></img>
     </div>
+    </div>
+
     </div>
   )
 }

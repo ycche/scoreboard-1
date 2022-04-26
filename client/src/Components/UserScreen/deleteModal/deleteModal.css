@@ -1,0 +1,92 @@
+#portal .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .container .modal {
+    z-index: 1;
+    width: 50%;
+    height: 45%;
+    background: white;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    animation: animate 0.3s;
+    text-align: center;
+  }
+
+  .create-modal-submit{
+      margin-top: 5%;
+  }
+
+  .create-modal-button{
+    font-size:18px;
+    width:335px;
+    background-color:#22c387;
+    border-radius:3px;
+    border:1px solid rgba(0,0,0,0.15);
+    padding-top:8px;
+    padding-bottom:8px;
+    color:white;
+    transition-duration: 0.3s;
+}
+
+.create-modal-button:hover{
+    background-color:#1ca070;
+    cursor:pointer;
+}
+
+.delete-modal-board-name {
+  font-size: 40px;
+  color: gray;
+  font-weight: 100;
+}
+
+.delete-modal-inputs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.delete-modal-confirm {
+  font-size:18px;
+    width:20%;
+    background-color: rgb(202, 16, 16);
+    border-radius:3px;
+    border:1px solid rgba(0,0,0,0.15);
+    padding-top:8px;
+    padding-bottom:8px;
+    color:white;
+    transition-duration: 0.3s;
+}
+.delete-modal-confirm:hover{
+  background-color:rgb(141, 10, 10);
+  cursor:pointer;
+}
+
+.delete-modal-cancel {
+  font-size:18px;
+    width:20%;
+    background-color: gray;
+    border-radius:3px;
+    border:1px solid rgba(0,0,0,0.15);
+    padding-top:8px;
+    padding-bottom:8px;
+    color:white;
+    transition-duration: 0.3s;
+}
+
+.delete-modal-cancel:hover{
+  background-color:rgb(80, 79, 79);
+  cursor:pointer;
+}

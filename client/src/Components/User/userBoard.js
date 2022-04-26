@@ -8,13 +8,9 @@ function UserBoard ({data}) {
   return (
       <div>
           <a href = "">
-              <div>
                   {data.board_name}
-                  <button type = "button" onClick = {handleClick}>
-                      Show Settings
-                  </button>
-              </div>
-
+                  Blaise 
+                  <img src="../../Images/delete_black_24dp.svg" alt="L"></img>
           </a>
       </div>
   )
