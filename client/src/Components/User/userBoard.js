@@ -9,7 +9,6 @@ function UserBoard ({data}) {
       <div>
           <a href = "">
                   {data.board_name}
-                  Blaise 
                   <img src="../../Images/delete_black_24dp.svg" alt="L"></img>
           </a>
       </div>
