@@ -13,4 +13,9 @@ A web app built with React, NodeJS, PostgreSQL that allows users to track their 
 - Docker-compose: Creates two containers, one for the server and the other for Postgres with a docker-compose file.
 - Kubernetes : Uses Terraform to create a kubernetes cluster on the cloud and a kubernetes deployment
 
-The app is hosted here : 
+The app is hosted here : http://board-tracker.ca/ (currently flagged by some antiviruses, something to fix)
+
+# Next Steps
+
+- Make compatable for mobile/smaller screens
+- Build out a design for user dashboards
